@@ -1,0 +1,10 @@
+TC,,product_id,fields
+1,Verrify that the API returns status code: 200 and Json schema is valid ,{{product_id_new}},
+2,Verrify that the 'id' parameter cotains uppercase and lowcase letters,abcABCDEFghyuzxcbzui,
+3,Verrify that the 'id' parameter does not exist,12348909846,
+4,Verrify that the 'fields' parameter is blank ,{{product_id_new}},
+5,Verrify that the 'fields' parameter is null,{{product_id_new}},null
+6,Verrify that the 'fields' parameter does not exist,{{product_id_new}},invalidfields
+7,Verrify that the 'fields' parameter is not correct format ,{{product_id_new}},body_html vendor
+8,Verrify that the 'fields' parameter is one value,{{product_id_new}},published_scope
+9,Verrify that the 'fields' parameter is three value,{{product_id_new}},"variants, status, handle"
