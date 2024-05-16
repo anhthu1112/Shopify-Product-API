@@ -21,9 +21,8 @@ jobs:
           postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-61c0d560-f8a7-4726-a244-909974c2ec63 -d Data-import-Retrieve-a-list-of-products.csv -n 49
   
       - name: Retrieve a single product
-        run: |
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-7aec95eb-1fac-41d5-a21c-55bb82bf3d49 --delay-request 1000
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-607991f0-aa39-4607-abb6-2da68f0a24d0 --delay-request 1000 -d Data-import-Retrieve-a-single-product.csv -n 9 
+        run: |         
+          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-607991f0-aa39-4607-abb6-2da68f0a24d0 -d Data-import-Retrieve-a-single-product.csv -n 9 
 
       - name: Update a product
         run: |
