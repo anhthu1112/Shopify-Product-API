@@ -14,42 +14,28 @@ jobs:
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
       - name: Create a new product
         run: |
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-fb801aed-29ea-4f19-a867-74b14078492d -d Data-import-Creat-a-new-product.csv -n 43          
+          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-fb801aed-29ea-4f19-a867-74b14078492d -d Data-import-Creat-a-new-product.csv -n 43 --delay-request 1000         
   
       - name: Retrieve a list of product
         run: |
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-61c0d560-f8a7-4726-a244-909974c2ec63 -d Data-import-Retrieve-a-list-of-products.csv -n 49
+          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-61c0d560-f8a7-4726-a244-909974c2ec63 -d Data-import-Retrieve-a-list-of-products.csv -n 49 --delay-request 1000
   
       - name: Retrieve a single product
         run: |         
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-607991f0-aa39-4607-abb6-2da68f0a24d0 -d Data-import-Retrieve-a-single-product.csv -n 9 
+          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-607991f0-aa39-4607-abb6-2da68f0a24d0 -d Data-import-Retrieve-a-single-product.csv -n 9 --delay-request 1000 
 
       - name: Update a product
-        run: |
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-60567072-0320-4e16-a774-28848160677d
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-dee2a9cf-34df-45e4-b8b2-8019cbd3c60e -d Data-import-Updates a product.csv -n 43
+        run: |          
+          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-15036bf0-0093-4e7e-8e3b-851952a80df1 -d Data-import-Updates-a-product.csv -n 43 --delay-request 1000
 
       - name: Count of products
         run: |
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-596b7440-78d3-45cd-b9b3-46bd6e396be8 --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-92a0c416-3e15-4263-9148-eba37dd52401 --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-fab568b4-2875-4157-9892-6ebe1c76b0ad --delay-request 1000 -d Data-import-Count-of-products.csv -n 26
+         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-c1ee3be6-cba5-44f8-87ab-ae4add2a8ce0 --delay-request 1000 -d Data-import-Count-of-products.csv -n 26 
 
       - name: Delete a product 
         run: |
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-f210e3b7-365d-4c47-ba86-d83f18fbf0eb --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-479352ad-4473-4f2e-9da2-e77249e0a12b --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-0fb8549b-4c77-42d9-8da2-1229ef6094d5 --delay-request 1000
+         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-b7d2d552-c97c-4baa-9b13-b086cedd1b8c --delay-request 1000
 
       - name: Flow a product 
         run: |
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-bc94d477-4720-4340-a019-3d221b34340a --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-a39a9010-d463-473f-a12d-a819b6bbfc44 --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-b24cfe3c-0bb1-4bbc-bfdb-848f30645294 --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-254f4445-656c-40f9-a1f9-809f5b963529 --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-a219892e-7fe2-474c-a808-54c08307e904 --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-4c3851bd-3491-4c23-b16a-f879d29b5d1b --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-58cebddb-ee47-48fd-bb85-50c9f747a62a --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-45877b4f-9654-4cf4-9b4f-4c43246aed28 --delay-request 1000
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-35e40b6a-c499-4a2a-ba47-4089f5710edf --delay-request 1000
-         
+         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-b1d768bc-9033-4845-a02a-69a076948295 --delay-request 1000
