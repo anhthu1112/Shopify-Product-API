@@ -25,3 +25,4 @@ TC ,,created_at_max,created_at_min,productType,published_status,status,vendor ,P
 24,Verify that 'vendor' parameter is valid ,,,,,active ,Thu test vendor 10/05,Thu test vendor 10/05
 25,Verify that 'vendor' parameter does not exsit ,,,,,active ,vendorInvalid,
 26,"Verify that the 'vendor'  parameter contains uppercase letters, lowercase letters and special characters",,,,,active ,ABCDEghijkmlno!@#^&*()$,
+
