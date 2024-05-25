@@ -14,28 +14,28 @@ jobs:
         run: postman login --with-api-key ${{ secrets.POSTMAN_API_KEY }}
       - name: Create a new product
         run: |
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-fb801aed-29ea-4f19-a867-74b14078492d -d Data-import-Creat-a-new-product.csv -n 43 --delay-request 1000         
+          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e --env-var "token=${{ secrets.TOKEN }} -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-fb801aed-29ea-4f19-a867-74b14078492d -d Data-import-Creat-a-new-product.csv -n 43 --delay-request 1000         
   
       - name: Retrieve a list of product
         run: |
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-61c0d560-f8a7-4726-a244-909974c2ec63 -d Data-import-Retrieve-a-list-of-products.csv -n 49 --delay-request 1000
+          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e --env-var "token=${{ secrets.TOKEN }} -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-61c0d560-f8a7-4726-a244-909974c2ec63 -d Data-import-Retrieve-a-list-of-products.csv -n 49 --delay-request 1000
   
       - name: Retrieve a single product
         run: |         
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-607991f0-aa39-4607-abb6-2da68f0a24d0 -d Data-import-Retrieve-a-single-product.csv -n 9 --delay-request 1000 
+          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e --env-var "token=${{ secrets.TOKEN }} -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-607991f0-aa39-4607-abb6-2da68f0a24d0 -d Data-import-Retrieve-a-single-product.csv -n 9 --delay-request 1000 
 
       - name: Update a product
         run: |          
-          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-15036bf0-0093-4e7e-8e3b-851952a80df1 -d Data-import-Updates-a-product.csv -n 43 --delay-request 1000
+          postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e --env-var "token=${{ secrets.TOKEN }} -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-15036bf0-0093-4e7e-8e3b-851952a80df1 -d Data-import-Updates-a-product.csv -n 43 --delay-request 1000
 
       - name: Count of products
         run: |
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-c1ee3be6-cba5-44f8-87ab-ae4add2a8ce0 --delay-request 1000 -d Data-import-Count-of-products.csv -n 26 
+         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e --env-var "token=${{ secrets.TOKEN }} -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-c1ee3be6-cba5-44f8-87ab-ae4add2a8ce0 --delay-request 1000 -d Data-import-Count-of-products.csv -n 26 
 
       - name: Delete a product 
         run: |
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-b7d2d552-c97c-4baa-9b13-b086cedd1b8c --delay-request 1000
+         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e --env-var "token=${{ secrets.TOKEN }} -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-b7d2d552-c97c-4baa-9b13-b086cedd1b8c --delay-request 1000
 
       - name: Flow a product 
         run: |
-         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-b1d768bc-9033-4845-a02a-69a076948295 --delay-request 1000
+         postman collection run 33233107-9b5a94d3-7445-4ecc-bcad-eacf50ef2c4e --env-var "token=${{ secrets.TOKEN }} -e 33233107-1c71836d-83ed-4ef1-b5f8-34c30dab1ab7 -i 33233107-b1d768bc-9033-4845-a02a-69a076948295 --delay-request 1000
